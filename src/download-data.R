@@ -3,22 +3,30 @@
 # Xinbin Huang, 2017
 #
 # This script downloads the required bitcoin data for this analysis. 
-# The downloaded data is located in the `data` folder. This script takes no argument.
+# The downloaded data is located in the `data` folder. 
+# This should take two arguments
+# - a URL pointing to the data
+# - a path/filename where to write the file to and what to call it data/data.csv
 #
-# Usage: Rscript download-data.R
+# Usage: Rscript src/download-data.R url path-to-store-file
+
+# read in command line arguments
+args <- commandArgs(trailingOnly = TRUE)
+data_url <- args[1]
+path <- args[2]
 
 # define main function
 main <- function(){
-      
+      args <- commandArgs(trailingOnly = TRUE)
       # download "bitcoin_dataset.csv"
-      if(file.exists(!"../data/bitcoin_dataset.csv"))
-      {download.file(url = "https://raw.githubusercontent.com/xinbinhuang/data-bitcoin/master/bitcoin_dataset.csv",
-                     destfile = "../data/bitcoin_dataset.csv", method = "curl")}
+      if(file.exists(!path))
+      {download.file(url = data_url,
+                     destfile = path, method = "curl")}
       
       # download "bitcoin_price.csv"
-      if(file.exists(!"../data/bitcoin_price.csv"))
-      {download.file(url = "https://raw.githubusercontent.com/xinbinhuang/data-bitcoin/master/bitcoin_price.csv",
-                     destfile = "../data/bitcoin_price.csv", method = "curl")}
+      if(file.exists(!path))
+      {download.file(url = data_url,
+                     destfile = path, method = "curl")}
 }
 
 # call main function
