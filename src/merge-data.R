@@ -2,7 +2,7 @@
 # merge-data.R
 # Xinbin Huang, 2017
 #
-# This script merge the raw data into one dataframe for subsequent analysis
+# This script merge the raw data into one dataframe with 3 variables for subsequent analysis
 # The merged data will ouput to the result folder. This takes three arguments:
 # data1 : The path to the first data being merged
 # data2 : The path to the second data being merged
@@ -29,9 +29,9 @@ main <- function(){
       # merge the two dataset
       price$Date <- mdy(price$Date, tz = "UTC")
       bitcoin <- left_join(price, feature)
-      
+      bitcoin_new <- bitcoin %>% select(Close, btc_difficulty, Volume)
       ## output the data to results folder
-      write_csv(bitcoin, output)
+      write_csv(bitcoin_new, output)
 }
 
 # call main function
