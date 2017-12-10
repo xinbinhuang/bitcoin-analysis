@@ -24,7 +24,9 @@ main <- function(){
       suppressPackageStartupMessages(library(tidyverse))
       
       # load in the data
-      bitcoin <- read_csv("results/merged-data.csv")
+      bitcoin <- read_csv(data)
+      
+      # perform regression analysis
       result <- tidy(summary(lm( data = bitcoin, Close ~ btc_difficulty * Volume)))
       
       ## output the result to results folder
