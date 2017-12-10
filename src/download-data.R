@@ -5,8 +5,8 @@
 # This script downloads the required bitcoin data for this analysis. 
 # The downloaded data is located in the `data` folder. 
 # This should take two arguments
-# - a URL pointing to the data
-# - a path/filename where to write the file to and what to call it data/data.csv
+# - url:                      a URL pointing to the data
+# - path-to-store-file:       a path/filename where to write the file to and what to call it data/data.csv
 #
 # Usage: Rscript src/download-data.R url path-to-store-file
 
