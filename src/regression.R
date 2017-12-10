@@ -25,7 +25,7 @@ main <- function(){
       
       # load in the data
       bitcoin <- read_csv("results/merged-data.csv")
-      result <- broom::tidy(summary(lm( data = bitcoin, Close ~ btc_difficulty * Volume)))
+      result <- tidy(summary(lm( data = bitcoin, Close ~ btc_difficulty * Volume)))
       
       ## output the result to results folder
       write_csv(result, output)

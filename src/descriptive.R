@@ -24,8 +24,10 @@ main <- function(){
       suppressPackageStartupMessages(library(tidyverse))
       
       # load in the data
-      bitcoin <- read_csv("results/merged-data.csv")
-      descrptive <- broom::tidy(summary(bitcoin))
+      bitcoin <- read_csv(data)
+      
+      # perform descriptive analysis
+      descrptive <- tidy(summary(bitcoin))
       
       ## output the result to results folder
       write_csv(descrptive, output)
