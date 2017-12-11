@@ -24,9 +24,9 @@ main <- function(){
       
       # read in the data frame
       bitcoin <- read_csv(data)
-      
+      data_plot <- bitcoin %>% select(- Date)
       # plot pair-plot
-      p <- ggpairs(bitcoin) + ggtitle("Pair plot of the three variables")
+      p <- ggpairs(data_plot) + ggtitle("Pair plot of the three variables")
 
       # output the data to figure folder
       ggsave(output, plot = p, device = "png")

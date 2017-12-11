@@ -29,7 +29,7 @@ main <- function(){
       # merge the two dataset
       price$Date <- mdy(price$Date, tz = "UTC")
       bitcoin <- left_join(price, feature)
-      bitcoin_new <- bitcoin %>% select(Close, btc_difficulty, Volume)
+      bitcoin_new <- bitcoin %>% select(Date, Close, btc_difficulty, Volume)
       ## output the data to results folder
       write_csv(bitcoin_new, output)
 }
