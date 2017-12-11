@@ -1,0 +1,29 @@
+Var1,Var2,Freq
+,     Date,Min.   :2013-04-28 00:00:00  
+,     Date,1st Qu.:2014-06-15 12:00:00  
+,     Date,Median :2015-08-03 00:00:00  
+,     Date,Mean   :2015-08-03 00:00:00  
+,     Date,3rd Qu.:2016-09-19 12:00:00  
+,     Date,Max.   :2017-11-07 00:00:00  
+,     Date,NA
+,    Close,Min.   :  68.43  
+,    Close,1st Qu.: 264.13  
+,    Close,Median : 453.38  
+,    Close,Mean   : 826.29  
+,    Close,3rd Qu.: 744.82  
+,    Close,Max.   :7407.41  
+,    Close,NA
+,btc_difficulty,Min.   :8.974e+06  
+,btc_difficulty,1st Qu.:1.176e+10  
+,btc_difficulty,Median :5.228e+10  
+,btc_difficulty,Mean   :1.939e+11  
+,btc_difficulty,3rd Qu.:2.258e+11  
+,btc_difficulty,Max.   :1.453e+12  
+,btc_difficulty,NA
+,    Volume,Min.   :2.858e+06  
+,    Volume,1st Qu.:2.163e+07  
+,    Volume,Median :5.042e+07  
+,    Volume,Mean   :2.783e+08  
+,    Volume,3rd Qu.:1.220e+08  
+,    Volume,Max.   :4.654e+09  
+,    Volume,NA's   :243  
