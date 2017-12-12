@@ -88,5 +88,5 @@ This command will generate the report in markdown file from a R markdown file.
 The generated report can be found in `results`.
 
 ```r
-Rscript -e 'ezknitr::ezknit("src/bitcoin.Rmd", out_dir = "results")'
+Rscript -e 'ezknitr::ezknit("src/bitcoin.Rmd", out_dir = "doc")'
 ```
