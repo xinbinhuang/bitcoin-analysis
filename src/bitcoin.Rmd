@@ -6,7 +6,7 @@ output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
 
 ## Project Overview
@@ -33,7 +33,7 @@ Let's take a look at the data frame for analysis. `Close` is the daily closing p
 
 ```{r,echo=FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
-df <- read_csv("../results/merged-data.csv")
+df <- read_csv("results/merged-data.csv")
 head(df)
 ```
 
@@ -46,13 +46,13 @@ Below is the pair-plots for these 3 variables. We can see that both `Volume` and
 Here we will first look at some descriptive statistics of the data.
 
 ```{r}
-broom::tidy(summary(df))
+read_csv("results/descriptive-result.csv")
 ```
 
 We can see that there are a big range for three groups of the variable (except `Date`). But we cannot really get any conclusions from the table above. Here below let's perform a regression analysis.
 
 ```{r}
-broom::tidy(lm(data= df, formula = Close ~ btc_difficulty * Volume))
+read_csv("results/regression-result.csv")
 ```
 
 As the results shown, all terms (`btc_difficulty`, `Volume`, and the inetration term) are significant at 5% level according to their p-values. However, `Volume` is in fact negatively correlated with the price which contradicts my previous assumption. 
