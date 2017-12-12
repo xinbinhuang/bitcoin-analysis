@@ -19,12 +19,12 @@ path <- args[2]
 main <- function(){
       args <- commandArgs(trailingOnly = TRUE)
       # download "bitcoin_dataset.csv"
-      if(file.exists(!path))
+      if(!file.exists(data_url))
       {download.file(url = data_url,
                      destfile = path, method = "curl")}
       
       # download "bitcoin_price.csv"
-      if(file.exists(!path))
+      if(!file.exists(data_url))
       {download.file(url = data_url,
                      destfile = path, method = "curl")}
 }
