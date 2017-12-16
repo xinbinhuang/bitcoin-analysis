@@ -1,0 +1,33 @@
+digraph G {
+n2[label="all", color="red"];
+n11[label="data/bitcoin_dataset.csv", color="green"];
+n9[label="data/bitcoin_price.csv", color="green"];
+n3[label="doc/bitcoin_report.md", color="blue"];
+n5[label="results/descriptive-result.csv", color="green"];
+n14[label="results/figure/analysis-plot.png", color="green"];
+n7[label="results/merged-data.csv", color="green"];
+n12[label="results/regression-result.csv", color="green"];
+n15[label="src/analysis-plot.R", color="red"];
+n4[label="src/bitcoin_report.Rmd", color="purple"];
+n6[label="src/descriptive.R", color="red"];
+n10[label="src/download-data.R", color="red"];
+n8[label="src/merge-data.R", color="red"];
+n13[label="src/regression.R", color="red"];
+n3 -> n2 ;
+n10 -> n11 ;
+n10 -> n9 ;
+n5 -> n3 ;
+n14 -> n3 ;
+n12 -> n3 ;
+n4 -> n3 ;
+n7 -> n5 ;
+n6 -> n5 ;
+n7 -> n14 ;
+n15 -> n14 ;
+n11 -> n7 ;
+n9 -> n7 ;
+n8 -> n7 ;
+n7 -> n12 ;
+n13 -> n12 ;
+}
+
