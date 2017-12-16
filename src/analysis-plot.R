@@ -6,7 +6,7 @@
 #
 # This should take two arguments
 # - data:         a path pointing to the data
-# - output:       a path/filename where to write the figure to and what to call it 
+# - output:       a path/filename where to write the figure to and what to call it
 #
 # Usage: Rscript src/plot.R results/merged-data.csv results/figure/analysis-plot.png
 
@@ -17,11 +17,11 @@ output <- args[2]
 
 # define main function
 main <- function(){
-      
+
       # loading packages
       suppressPackageStartupMessages(library(GGally))
       suppressPackageStartupMessages(library(tidyverse))
-      
+
       # read in the data frame
       bitcoin <- read_csv(data)
       data_plot <- bitcoin %>% select(- Date)
