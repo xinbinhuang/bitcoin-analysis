@@ -1,0 +1,27 @@
+Package: assertthat
+Title: Easy Pre and Post Assertions
+Version: 0.2.0.9000
+Authors@R: person("Hadley", "Wickham", , "hadley@rstudio.com", c("aut",
+    "cre"))
+Description: assertthat is an extension to stopifnot() that makes it
+    easy to declare the pre and post conditions that you code should
+    satisfy, while also producing friendly error messages so that your
+    users know what they've done wrong.
+License: GPL-3
+Imports: tools
+Suggests: testthat
+Collate: 'assert-that.r' 'on-failure.r' 'assertions-file.r'
+    'assertions-scalar.R' 'assertions.r' 'base.r' 'base-comparison.r'
+    'base-is.r' 'base-logical.r' 'base-misc.r' 'utils.r'
+    'validate-that.R'
+RoxygenNote: 6.0.1
+GithubRepo: assertthat
+GithubUsername: hadley
+GithubRef: master
+GithubSHA1: 37f0a56e94a10b8d0280fdabc08ffc1d6adbe1ee
+Author: Hadley Wickham [aut, cre]
+Maintainer: Hadley Wickham <hadley@rstudio.com>
+Built: R 3.4.3; ; 2017-12-14 20:29:14 UTC; unix
+InstallAgent: packrat 0.4.8.1
+InstallSource: github
+Hash: e0883c9d66dca0869ec59a29afaa5e4a
