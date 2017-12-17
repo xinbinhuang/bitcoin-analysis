@@ -54,7 +54,7 @@ Dependencies diagram for the analysis piepline
 ## Usage
 
 Get Docker Image:
-> `docker pull raffrica/etf_docker`
+> `docker pull xhuang09/bitcoin-analysis`
 
 Clone the repo:
 
