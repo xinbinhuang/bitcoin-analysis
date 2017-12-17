@@ -80,7 +80,7 @@ docker run -it --rm -v YOUR_LOCAL_DIRECTORY_OF_CLONED_REPO/:/home/bitcoin-analys
 cd home/bitcoin-analysis/
 ```
 
-5. To run the project:    
+5. To run the project analysis:    
 ```
 make all
 
@@ -91,4 +91,53 @@ make all
 make clean
 ```
 
+## Analysis script usage
+
+Run the following command to regenerate the analysis. All commands should be run in the project root directory. Regardsless of the dependency requirements, The following commands will give the same results of running the command `make all` in the root directory.
+
+
+#### Download the data
+This command will download the two required dataframes to the `data` folder as `bitcoin_dataset.csv` and `bitcoin_price.csv`.
+```r
+# first data frame
+Rscript src/download-data.R https://raw.githubusercontent.com/xinbinhuang/data-bitcoin/master/bitcoin_dataset.csv data/bitcoin_dataset.csv
+
+# second data frame
+Rscript src/download-data.R https://raw.githubusercontent.com/xinbinhuang/data-bitcoin/master/bitcoin_price.csv data/bitcoin_price.csv
+```
+
+#### Merge data for analysis
+This command will merge the two dataframes into one dataframe for subsequent analysis. The output CSV file will be stored in `data/bitcoin_dataset.csv`
+
+```r
+Rscript src/merge-data.R data/bitcoin_price.csv data/bitcoin_dataset.csv results/merged-data.csv
+```
+#### Perform descriptive analysis
+This command will perform a descriptive analysis on the three variables. The output CSV file will be stored in `results/descriptive-result.csv`
+
+```r
+Rscript src/descriptive.R results/merged-data.csv results/descriptive-result.csv
+```
+
+#### Perform regression analysis
+This command will perform a regression analysis on the three variables. The output CSV file will be stored in `results/regression-result.csv`
+
+```r
+Rscript src/regression.R results/merged-data.csv results/regression-result.csv
+```
+
+#### Generate pair-plot for the data
+This command will generate a pair-plot on the three variables from the merged data. The output png file will be stored in `results/figure/analysis-plot.png`.
+
+```r
+Rscript src/plot.R results/merged-data.csv results/figure/analysis-plot.png
+```
+
+#### Generate the report from R markdown
+This command will generate the report in markdown file from a R markdown file.
+The generated report can be found in `results`.
+
+```r
+Rscript -e 'ezknitr::ezknit("src/bitcoin_report.Rmd", out_dir = "doc")'
+```
 
