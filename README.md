@@ -53,25 +53,42 @@ Dependencies diagram for the analysis piepline
 
 ## Usage
 
-Get Docker Image:
-> `docker pull xhuang09/bitcoin-analysis`
+1. Get Docker Image:
+```
+docker pull xhuang09/bitcoin-analysis
+```
 
-Clone the repo:
+2. Clone the repo:
 
 For HTTPS:
-> `git clone https://github.com/xinbinhuang/bitcoin-analysis.git`
+```
+git clone https://github.com/xinbinhuang/bitcoin-analysis.git
+```
 
 For SSH:
-> `git clone git@github.com:xinbinhuang/bitcoin-analysis.git`
+```
+git clone git@github.com:xinbinhuang/bitcoin-analysis.git
+```
 
-Run the Docker Image:
-> docker run -it --rm -v YOUR_LOCAL_DIRECTORY_OF_CLONED_REPO/:/home/bitcoin-analysis xhuang09/bitcoin-analysis  /bin/bash
+3. Run the Docker Image:
+```
+docker run -it --rm -v YOUR_LOCAL_DIRECTORY_OF_CLONED_REPO/:/home/bitcoin-analysis xhuang09/bitcoin-analysis /bin/bash
+```
 
-Change Directory:
-> `cd home/bitcoin-analysis/`
+4. Change Directory:
+```
+cd home/bitcoin-analysis/
+```
 
-To clean previously outputted files:
-> `make clean`  
+5. To run the project:    
+```
+make all
 
-To run the project:    
-> `make all`  
+```
+
+6. To clean previously outputted files:
+```
+make clean
+```
+
+
