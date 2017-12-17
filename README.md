@@ -93,7 +93,7 @@ make clean
 
 ## Analysis script usage
 
-Run the following command to regenerate the analysis. All commands should be run in the project root directory. Regardsless of the dependency requirements, The following commands will give the same results of running the command `make all` in the root directory.
+Run the following command to regenerate the analysis. All commands should be run in the project root directory. Regardless of the dependency requirements, The following commands will give the same results of running the command make all in the root directory.
 
 
 #### Download the data
