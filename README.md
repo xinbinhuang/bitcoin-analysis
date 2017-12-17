@@ -31,6 +31,8 @@ This project performs a simple analysis on the effect of two factors on _Bitcoin
 > The dataset includes the historical price and features data of the cryptocurrency _Bitcoin_. It is retrieved from Kaggle [Cryptocurrency Historical Prices](https://www.kaggle.com/sudalairajkumar/cryptocurrencypricehistory)
 
 - The downloaded files are located in `data` folder.
+  - `bitcoin_dataset.csv`: include some features describing the _Bitcoin_
+  - `bitcoin_price.csv` : include price information about the _Bitcoin_
 - There are two `.csv` files (`features.csv` and `price.csv`) in the `results` folder for testing purposes.
 
 #### variables
