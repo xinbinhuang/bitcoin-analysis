@@ -1,6 +1,7 @@
 # Bitcoin-analysis
 
 _Author_: Xinbin Huang
+
 _Last updated_: Dec 16, 2017
 
 ## Project Overview
